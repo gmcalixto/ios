@@ -65,7 +65,6 @@ int main(int argc, const char * argv[]) {
     //menor ou igual
     c=a<=b;
     NSLog(@"\nA <= B = %d",c);
-
     
     
     bool x = 0;
