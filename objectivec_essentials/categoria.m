@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
+//Categoria personalizando métodos para a classe NSNumber
+//A categoria é utilizada para classes de componentes já compilados do framework
 @interface NSNumber (SmartNumber)
 
 -(float)getDouble;

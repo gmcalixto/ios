@@ -20,7 +20,7 @@
     
 }
 
--(id)initWithName:(NSString *)_marca modelo:(NSString *)_modelo;
+-(id)init:(NSString *)_marca modelo:(NSString *)_modelo;
 -(NSString *)getMarca;
 -(NSString *)getModelo;
 
@@ -29,7 +29,7 @@
 
 @implementation Veiculo
 
--(id)initWithName:(NSString *)_marca modelo:(NSString *)_modelo{
+-(id)init:(NSString *)_marca modelo:(NSString *)_modelo{
     marca = _marca;
     modelo = _modelo;
     return self;
@@ -52,7 +52,7 @@
     NSString *tipoAuto;
 }
 
--(id)initWithName:(NSString *)_marca modelo:(NSString *)_modelo motor:(float)_motor tipoAuto:(NSString *)_tipoAuto;
+-(id)init:(NSString *)_marca modelo:(NSString *)_modelo motor:(float)_motor tipoAuto:(NSString *)_tipoAuto;
 -(float)getMotor;
 -(NSString *) getTipoAuto;
 
@@ -60,7 +60,7 @@
 
 @implementation Automovel
 
--(id)initWithName:(NSString *)_marca modelo:(NSString *)_modelo motor:(float)_motor tipoAuto:(NSString *)_tipoAuto{
+-(id)init:(NSString *)_marca modelo:(NSString *)_modelo motor:(float)_motor tipoAuto:(NSString *)_tipoAuto{
  
     marca = _marca;
     modelo = _modelo;
@@ -83,7 +83,8 @@ int main(int argc, const char * argv[]) {
     //bloco que faz a operação de garbage collector
     @autoreleasepool {
         
-        Automovel *a = [[Automovel alloc] initWithName:@"Gol" modelo:@"VW" motor:1.6f tipoAuto:@"Hatch"];
+        //instanciando objeto a partir de classe derivada
+        Automovel *a = [[Automovel alloc] init:@"Gol" modelo:@"VW" motor:1.6f tipoAuto:@"Hatch"];
         NSLog(@"Nome: %@",[a getMarca]);
         NSLog(@"Nome: %@",[a getModelo]);
         NSLog(@"Nome: %.2f",[a getMotor]);
