@@ -12,12 +12,18 @@ class ViewController: UIViewController {
 
     //buffer operacao
     var acumulador:Float = 0.0
-    var maisPressionado:Bool = false
+    var tipoOpPressionado:String = ""
+    var botaoClearPressionado:Bool = true
+    var botaoOpPressionado:Bool = false
+    var error:Bool = false
     
     @IBOutlet weak var txtNumero: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //informa que este deve ser o componente focado
+        txtNumero.becomeFirstResponder()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -28,21 +34,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func doSoma(_ sender: Any) {
-        
-        acumulador += Float(txtNumero.text!)!
-        
-        txtNumero.text = "\(NSString(format: "%f",acumulador))"
-        
-        maisPressionado = true
+        if !error {
+            if botaoClearPressionado{
+                acumulador = Float(txtNumero.text!)!
+                botaoClearPressionado = false
+            }
+            else{
+                acumulador += Float(txtNumero.text!)!
+            }
+            
+            txtNumero.text = "\(NSString(format: "%f",acumulador))"
+            tipoOpPressionado = "+"
+            botaoOpPressionado = true;
+        }
         
     }
 
     @IBAction func doChange(_ sender: Any) {
         
-        if maisPressionado{
-            maisPressionado = false
-            
-            var lastText:String = "\((sender as! UITextField).text!)"
+        var lastText:String = "\((sender as! UITextField).text!)"
+        
+        if botaoOpPressionado  {
+            botaoOpPressionado = false
             
             txtNumero.text = "\(lastText.characters.last!)"
             
@@ -50,8 +63,81 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func doSub(_ sender: Any) {
+        if !error {
+            if botaoClearPressionado{
+                acumulador = Float(txtNumero.text!)!
+                botaoClearPressionado = false
+            }
+            else{
+                acumulador -= Float(txtNumero.text!)!
+            }
+            
+            txtNumero.text = "\(NSString(format: "%f",acumulador))"
+            tipoOpPressionado = "-"
+            botaoOpPressionado = true;
+        }
+    }
   
+    @IBAction func doMult(_ sender: Any) {
+        if !error{
+            if botaoClearPressionado{
+                acumulador = Float(txtNumero.text!)!
+                botaoClearPressionado = false
+            }
+            else{
+                acumulador *= Float(txtNumero.text!)!
+            }
+            
+            txtNumero.text = "\(NSString(format: "%f",acumulador))"
+            tipoOpPressionado = "*"
+            botaoOpPressionado = true;
+        }
+        
+    }
 
+    @IBAction func doDiv(_ sender: Any) {
+        if !error{
+            if botaoClearPressionado{
+                acumulador = Float(txtNumero.text!)!
+                botaoClearPressionado = false
+            }
+            else{
+                if (Float(txtNumero.text!)!) == 0.0{
+                    txtNumero.text = "ErrDiv0"
+                    error = true;
+                    return;
+                }
+                else{
+                    acumulador /= Float(txtNumero.text!)!
+                }
+                
+            }
+            
+            txtNumero.text = "\(NSString(format: "%f",acumulador))"
+            tipoOpPressionado = "/"
+            botaoOpPressionado = true;
+        }
+        
+        
+    }
 
+    @IBAction func doIgual(_ sender: Any) {
+        switch tipoOpPressionado{
+            case "+": doSoma((Any).self)
+            case "-": doSub((Any).self)
+            case "*": doMult((Any).self)
+            case "/": doDiv((Any).self)
+            default: print("IgualPressionado")
+        }
+    }
+    
+    @IBAction func doLimpar(_ sender: Any) {
+        error = false
+        botaoClearPressionado=true
+        txtNumero.text = ""
+    }
+
+    
 }
 
