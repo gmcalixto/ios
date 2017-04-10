@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjetoSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minhas Estórias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZY-U9-mzE">
+                                <rect key="frame" x="102" y="85" width="170" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7E-du-tcA">
+                                <rect key="frame" x="104" y="340" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="João e Maria"/>
+                                <connections>
+                                    <action selector="goEstoria1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJ7-fC-uoQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJ4-W7-z0P">
+                                <rect key="frame" x="113" y="416" width="146" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Patinho Feio"/>
+                                <connections>
+                                    <action selector="goEstoria2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HW-gn-aDD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Seu nome aqui" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iU5-an-RN2">
+                                <rect key="frame" x="82" y="238" width="210" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtNome" destination="iU5-an-RN2" id="i4q-e8-4JZ"/>
+                        <segue destination="F0C-J4-IgM" kind="show" identifier="Estoria1Segue" id="0sZ-Pq-3DW"/>
+                        <segue destination="DEw-mj-l4A" kind="show" identifier="Estoria2Segue" id="cqW-XN-Wdc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="242"/>
+        </scene>
+        <!--Estoria1 View Controller-->
+        <scene sceneID="qd9-b5-auX">
+            <objects>
+                <viewController id="F0C-J4-IgM" customClass="Estoria1ViewController" customModule="ProjetoSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WIv-cC-oBt"/>
+                        <viewControllerLayoutGuide type="bottom" id="A02-bE-BSv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fna-9e-GNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NomePessoa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-9V-mrA">
+                                <rect key="frame" x="27" y="66" width="321" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-8N-NvT">
+                                <rect key="frame" x="24" y="152" width="324" height="328"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Às margens de uma extensa mata existia, há muito tempo, uma cabana pobre, feita de troncos de árvore, na qual morava um lenhador com sua segunda esposa e seus dois filhinhos, nascidos do primeiro casamento. O garoto chamava-se João e a menina, Maria.
+A vida sempre fora difícil na casa do lenhador, mas naquela época as coisas haviam piorado ainda mais: não havia comida para todos.
+— Minha mulher, o que será de nós? Acabaremos todos por morrer de necessidade. E as crianças serão as primeiras…
+— Há uma solução… — disse a madrasta, que era muito malvada. — Amanhã daremos a João e Maria um pedaço de pão, depois os levaremos à mata e lá os abandonaremos.
+O lenhador não queria nem ouvir falar de um plano tão cruel, mas a mulher, esperta e insistente, conseguiu convencê-lo.
+No aposento ao lado, as duas crianças tinham escutado tudo, e Maria desatou a chorar.
+— Não chore — tranqüilizou-a o irmão — Tenho uma idéia.
+Esperou que os pais estivessem dormindo, saiu da cabana, catou um punhado de pedrinhas brancas que brilhavam ao clarão da lua e as escondeu no bolso. Depois voltou para a cama.
+No dia seguinte, ao amanhecer, a madrasta acordou as crianças.
+As crianças foram com o pai e a madrasta cortar lenha na floresta e lá foram abandonadas.
+João havia marcado o caminho com as pedrinhas e, ao anoitecer, conseguiram voltar para casa.
+O pai ficou contente, mas a madrasta, não. Mandou-os dormir e trancou a porta do quarto. Como era malvada, ela planejou levá-los ainda mais longe no dia seguinte.
+João ouviu a madrasta novamente convencendo o pai a abandoná-los, mas desta vez não conseguiu sair do quarto para apanhar as pedrinhas, pois sua madrasta havia trancado a porta. Maria desesperada só chorava. João pediu-lhe para ficar calma e ter fé em Deus. 
+Antes de saírem para o passeio, receberam para comer um pedaço de pão velho. João, em vez de comer o pão, guardou-o.
+Ao caminhar para a floresta, João jogava as migalhas de pão no chão, para marcar o caminho da volta.
+Chegando a uma clareira, a madrasta ordenou que esperassem até que ela colhesse algumas frutas, por ali. Mas eles esperaram em vão. Ela os tinha abandonado mesmo!
+- Não chore Maria, disse João. Agora, só temos é que seguir a trilha que eu fiz até aqui, e ela está toda marcada com as migalhas do pão. 
+Só que os passarinhos tinham comido todas as migalhas de pão deixadas no caminho.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-xP-vfq">
+                                <rect key="frame" x="67" y="505" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="next" text="Toque para continuar!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fm-yv-54E">
+                                        <rect key="frame" x="36" y="54" width="168" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vsi-qB-yHc" appends="YES" id="AyH-Bw-b01"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <connections>
+                        <outlet property="txtNome" destination="dDY-9V-mrA" id="UWX-Nc-nJN"/>
+                        <segue destination="K8u-Xu-Bjy" kind="show" identifier="Estoria1FimSegue" id="5jm-oK-x2q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3re-gh-4lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vsi-qB-yHc">
+                    <connections>
+                        <action selector="onTap:" destination="F0C-J4-IgM" id="1hD-qV-iIQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="425" y="-92"/>
+        </scene>
+        <!--Estoria2 View Controller-->
+        <scene sceneID="Arj-ww-L0R">
+            <objects>
+                <viewController id="DEw-mj-l4A" customClass="Estoria2ViewController" customModule="ProjetoSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5sL-Wz-arI"/>
+                        <viewControllerLayoutGuide type="bottom" id="SgW-dr-5dX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Syj-pc-AXU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NomePessoa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0m-QH-7gw">
+                                <rect key="frame" x="28" y="39" width="321" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bl9-bo-yel">
+                                <rect key="frame" x="25" y="125" width="324" height="328"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">ERA UMA VEZ uma mamã pata que teve 5 ovos. Ela esperava ansiosamente pelo dia em que os seus ovos quebrassem e deles nascessem os seus queridos filhos!
+
+Quando esse dia chegou, os ovos da mamã pata começaram a abrir, um a um, e ela, alegremente, começou a saudar os seus novos patinhos. Mas o último ovo demorou mais a partir, e a mamã começou a ficar nervosa…
+
+Finalmente, a casca quebrou e, para surpresa da mamã pata, de lá saiu um patinho muito diferente de todos os seus outros filhos.
+- Este patinho feio não pode ser meu! Exclama a mamã pata.
+- Alguém te pregou uma partida. Afirma a vizinha galinha.
+
+Os dias passaram e, à medida que os patinhos cresciam, o patinho feio tornava-se cada vez mais diferente dos outros patinhos.
+Cansado de ser gozado pelos seus irmãos e por todos os animais da quinta, o patinho feio decide partir.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jo7-7v-V5g">
+                                <rect key="frame" x="68" y="490" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toque para continuar!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-g2-eiP">
+                                        <rect key="frame" x="36" y="54" width="168" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kvR-qc-kts" appends="YES" id="DQj-Yu-VGY"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtNome" destination="u0m-QH-7gw" id="NIN-uf-wtc"/>
+                        <segue destination="K8u-Xu-Bjy" kind="show" identifier="Estoria2FimSegue" id="BC4-Pn-crB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2f-SG-OZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kvR-qc-kts">
+                    <connections>
+                        <action selector="goTap:" destination="DEw-mj-l4A" id="gCK-zj-eGQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="425" y="569"/>
+        </scene>
+        <!--Fim View Controller-->
+        <scene sceneID="gRO-JI-0xe">
+            <objects>
+                <viewController id="K8u-Xu-Bjy" customClass="FimViewController" customModule="ProjetoSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qPo-BK-haP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mbn-Oe-j0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X1e-Th-Zoy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FIM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tD-ly-t08">
+                                <rect key="frame" x="107" y="107" width="161" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hIm-TT-qfs">
+                                <rect key="frame" x="16" y="361" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toque duas vezes para voltar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wk-vm-5ja">
+                                        <rect key="frame" x="22" y="30" width="297" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="C0m-We-42Q" appends="YES" id="Zzk-nh-NRJ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="VoltarSegue" id="5nm-tp-Rce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhv-z5-YT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="C0m-We-42Q">
+                    <connections>
+                        <action selector="goTap:" destination="K8u-Xu-Bjy" id="rz3-Ol-ema"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1309.5999999999999" y="250.52473763118442"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BC4-Pn-crB"/>
+    </inferredMetricsTieBreakers>
+</document>
